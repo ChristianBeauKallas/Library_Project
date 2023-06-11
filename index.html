@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
     <title>Library Project</title>
-</head>
-<body>
-    <main style="display: flex; justify-content: center; align-items: center; text-align: center;">
-        <div>
-            <h1>Library Project</h1>
-            <div id="library">
-                <!-- Add new book form here -->
-                <div>
-                    <label for="titleInput">Title</label>
-                    <input type="text" id="titleInput">
-                    <label for="authorInput">Author</label>
-                    <input type="text" id="authorInput">
-                    <label for="readCheckbox">Read</label>
-                    <input type="checkbox" id="readCheckbox">
-                </div>
-                <!-- Add table here -->
-                <table id="table" style="min-width: 680px; margin: 2rem">
-                    <thead>
-                        <tr>
-                            <th>Book Title</th>
-                            <th>Author</th>
-                            <th>Read</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tBody">
-                        <tr>
-                            <td>Name of the Wind</td>
-                            <td>Patrick Rothfuss</td>
-                            <td>
-                            <input type="checkbox" name="read" id="readLibraryCheckbox" checked disabled/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button id="addBookButton">Add Book</button>
-            </div>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1>The Reader's Library</h1>
+        <div id="library">
+          <div class="form-container">
+            <label for="titleInput">Book Title</label>
+            <input type="text" id="titleInput" />
+            <label for="authorInput">Author</label>
+            <input type="text" id="authorInput" />
+            <label for="readCheckbox">Read</label>
+            <input type="checkbox" id="readCheckbox" />
+            <button id="addBookButton">Add Book</button>
+          </div>
+          <table id="table">
+            <thead>
+              <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Read</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+              <tr>
+                <td>The Alchemist</td>
+                <td>Paulo Coelho</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    name="read"
+                    id="readLibraryCheckbox"
+                    checked
+                    disabled
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </main>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
