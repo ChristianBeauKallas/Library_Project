@@ -38,6 +38,11 @@ class Library {
         checkbox.type = "checkbox";
         checkbox.checked = book.read;
         checkbox.disabled = book.read;
+        checkbox.addEventListener('click', () => {
+            if (!checkbox.disabled) {
+                this.markRead(checkbox, book.id);
+            }
+        });
         cellRead.appendChild(checkbox);
 
         newRow.appendChild(cellTitle);
